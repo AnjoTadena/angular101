@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-event-binding',
@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./event-binding.component.css']
 })
 export class EventBindingComponent {
-	onClick () {
-		alert('Event handling worked!');
+	@Output() clicked = new EventEmitter<string>();
+
+	onClicked () {
+		this.clicked.emit('It worked on event emitter!');
 	}
 }
