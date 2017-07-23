@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./databinding.component.css']
 })
 export class DatabindingComponent {
-
+	stringInterpolation = 'This is a string interpolation.';
+	numberInterpolation = 2;
 }
